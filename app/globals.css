@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background: #0E1116;
+  color: #E9EDF1;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5FBF9F;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #5FBF9F;
+  display: inline-block;
+}
+
+.milebar { display: flex; gap: 4px; margin-bottom: 16px; }
+.milebar span { width: 28px; height: 5px; background: #262E38; }
+.milebar span.done { background: #5FBF9F; }
+
+.sect-divider { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.sect-divider .track {
+  flex: 1; height: 2px; background: #262E38; position: relative; max-width: 120px;
+}
+.sect-divider .track::after {
+  content: ''; position: absolute; left: 0; top: 0; height: 100%;
+  background: #5FBF9F; width: var(--fill, 40%);
+}
+.sect-divider .tag {
+  font-family: var(--font-mono); font-size: 11px; color: #5B6472; white-space: nowrap;
+}
