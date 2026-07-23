@@ -6,6 +6,10 @@ export default function Contact() {
       <section id="contact" className="py-24 text-center">
         <SectionDivider step={5} total={5} fill="100%" center />
         <div className="eyebrow justify-center">let&apos;s talk</div>
+        <p className="text-textSecondary mb-3">
+          If you&apos;re a recruiter or hiring manager and something here
+          looks like a fit, I&apos;d welcome the conversation.
+        </p>
         <h2 className="font-display font-semibold text-4xl mb-3">
           Open to Senior PM &amp; Principal TPM roles
         </h2>
