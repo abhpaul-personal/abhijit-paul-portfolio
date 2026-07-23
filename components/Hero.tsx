@@ -36,6 +36,14 @@ export default function Hero() {
         serving merchants across the EU marketplace ecosystem.
       </p>
 
+      <a
+        href="/Abhijit_Paul_CV.pdf"
+        download
+        className="inline-flex items-center gap-2 bg-signal text-bg font-mono text-sm font-medium rounded-full px-6 py-3 mb-8 hover:opacity-90 transition-opacity"
+      >
+        Download CV ↓
+      </a>
+
       <div className="font-mono bg-surface border border-border rounded-[10px] grid grid-cols-2 md:grid-cols-4">
         {stats.map((s, i) => (
           <div

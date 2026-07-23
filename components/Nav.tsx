@@ -8,6 +8,7 @@ export default function Nav() {
           <a href="#about" className="hover:text-signal">About</a>
           <a href="#insights" className="hover:text-signal">Insights</a>
           <a href="#contact" className="hover:text-signal">Contact</a>
+          <a href="/Abhijit_Paul_CV.pdf" download className="hover:text-signal">Download CV</a>
         </div>
       </div>
     </nav>
