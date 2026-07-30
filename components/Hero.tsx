@@ -8,6 +8,16 @@ const stats = [
   { num: "€3.65M", label: "ARR delivered" },
 ];
 
+const statusItems = [
+  { label: "Notice period", value: "15 days" },
+  { label: "Relocation", value: "Open — anywhere in India" },
+  { label: "Target roles", value: "Senior Product Management" },
+  {
+    label: "Comp band",
+    value: "₹50–70L (India) · flexible for the right role",
+  },
+];
+
 export default function Hero() {
   return (
     <section className="pt-32 pb-20">
@@ -58,6 +68,25 @@ export default function Hero() {
             </div>
             <div className="text-xs text-textMuted mt-1.5 leading-snug">
               {s.label}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="font-mono border-t border-border grid grid-cols-2 md:grid-cols-4">
+        {statusItems.map((s, i) => (
+          <div
+            key={s.label}
+            className={`p-4 ${i < statusItems.length - 1 ? "md:border-r" : ""} ${
+              i % 2 === 0 ? "border-r md:border-r" : "md:border-r-0"
+            } border-border`}
+          >
+            <div className="text-[10px] uppercase tracking-wide text-textMuted mb-1">
+              {s.label}
+            </div>
+            <div className="text-xs text-textSecondary flex items-center gap-2">
+              <span className="text-signal text-[11px]">▪</span>
+              {s.value}
             </div>
           </div>
         ))}
