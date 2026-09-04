@@ -11,7 +11,7 @@ export default function Contact() {
           looks like a fit, I&apos;d welcome the conversation.
         </p>
         <h2 className="font-display font-semibold text-4xl mb-3">
-          Open to Senior PM &amp; Principal TPM roles
+          Open to Senior Product Management roles
         </h2>
         <p className="mx-auto text-textSecondary">
           Based in Mumbai, open to relocation anywhere in India.

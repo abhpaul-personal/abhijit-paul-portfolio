@@ -43,9 +43,9 @@ export default function SelectedWork() {
   return (
     <section id="work" className="py-24">
       <SectionDivider step={2} total={5} fill="40%" />
-      <div className="eyebrow">delivered programs</div>
+      <div className="eyebrow">delivered work</div>
       <h2 className="font-display font-semibold text-[32px] mb-10">
-        Programs &amp; products
+        Selected work
       </h2>
 
       <Card
@@ -74,7 +74,7 @@ export default function SelectedWork() {
         body="Owned GDPR compliance across the platform, built the AWS S3 financial data pipeline, and led SOC 2 Type I readiness — achieved in a single quarter."
         bullets={[
           "SOC 2 Type I achieved in one quarter",
-          "Full GDPR compliance program ownership",
+          "Full GDPR compliance ownership",
         ]}
       />
 
@@ -123,6 +123,28 @@ export default function SelectedWork() {
               </span>
             </div>
           ))}
+        </div>
+      </Card>
+
+      <Card
+        title="Founding PM — ZuPick"
+        meta="Fanmart Media Private Limited · Aug 2026 – present · part-time / advisory"
+        body="Founding Product Manager for ZuPick, an early-stage AI-powered shopping discovery and comparison startup. Non-exclusive advisory engagement, ~4-5 hours/day, applying the same PM-first, human-in-the-loop discipline used on Job Kit Agent to a live consumer AI product."
+      />
+
+      <Card
+        title="Founder — PM Career Sprint"
+        meta="Consulting practice · iamunderpaid.com"
+        body="CV & LinkedIn optimization and mock interview coaching for PM job seekers. Services: PM Career Strategy 1:1, CV & LinkedIn Teardown, Job Search Sprint Advisory Package, Async Q&A."
+      >
+        <div className="font-mono text-[13px] mt-4">
+          <a
+            href="https://iamunderpaid.com/m/abhijit-paul"
+            target="_blank"
+            className="text-signal hover:underline"
+          >
+            Book a session →
+          </a>
         </div>
       </Card>
     </section>

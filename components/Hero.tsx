@@ -1,7 +1,7 @@
 const stats = [
   {
     num: "20+ yrs",
-    label: "Shipped across e-commerce, SaaS, logistics — 10 engineering, 10 product & program",
+    label: "Shipped across e-commerce, SaaS, logistics — 10 engineering, 10 product",
   },
   { num: "30M", label: "Orders/month at scale (from ~100K)" },
   { num: "33", label: "Merchant migrations delivered, zero incidents" },
@@ -9,12 +9,12 @@ const stats = [
 ];
 
 const statusItems = [
-  { label: "Notice period", value: "15 days" },
+  { label: "Notice period", value: "Available Immediately" },
   { label: "Relocation", value: "Open — anywhere in India" },
   { label: "Target roles", value: "Senior Product Management" },
   {
     label: "Comp band",
-    value: "₹50–70L (India) · flexible for the right role",
+    value: "₹50–70L (India) · flexible",
   },
 ];
 
@@ -28,11 +28,10 @@ export default function Hero() {
         <span />
         <span />
       </div>
-      <div className="eyebrow">now shipping · Q3 2026</div>
       <div className="mb-7">
         <div className="font-display font-semibold text-[26px]">Abhijit Paul</div>
         <div className="font-mono text-[13px] text-textSecondary mt-1">
-          Senior Product Manager — Platform &amp; Program Delivery
+          Senior Product Manager — Platform &amp; Product Delivery
         </div>
       </div>
       <h1 className="font-display font-semibold text-[52px] leading-[1.1] mb-6 -tracking-[0.01em] max-md:text-[34px]">
@@ -42,8 +41,8 @@ export default function Hero() {
         Senior Product Manager with 20+ years across e-commerce, B2B SaaS, and
         logistics — I take fragile, manual systems from zero to production
         scale, then keep them compliant and reliable as they grow. Currently
-        building fulfillment infrastructure at Tradebyte (Zalando Group),
-        serving merchants across the EU marketplace ecosystem.
+        Founding PM at ZuPick, an AI-powered shopping discovery startup, and
+        open to Senior Product Management opportunities.
       </p>
 
       <a
@@ -91,6 +90,14 @@ export default function Hero() {
           </div>
         ))}
       </div>
+
+      <a
+        href="/Abhijit_Paul_CV.pdf"
+        download
+        className="inline-flex items-center gap-1.5 font-mono text-xs text-signal hover:underline mt-4"
+      >
+        Download CV ↓
+      </a>
     </section>
   );
 }

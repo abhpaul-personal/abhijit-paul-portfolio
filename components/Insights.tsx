@@ -47,12 +47,12 @@ export default function Insights() {
           Building it myself
         </h3>
         <blockquote className="font-display font-medium text-lg border-l-2 border-signal pl-5 mb-5">
-          Building Job Kit Agent taught me something my program management
+          Building Job Kit Agent taught me something my product management
           background hadn&apos;t: the discipline doesn&apos;t change when
           you&apos;re the one shipping the code, but the loop gets tighter.
         </blockquote>
         <p className="text-textSecondary max-w-[640px]">
-          I ran it exactly the way I&apos;d run any program — a PRD first,
+          I ran it exactly the way I&apos;d run any product initiative — a PRD first,
           broken into six milestones, with a defined review gate at each one,
           delegated to Claude Code and reviewed by me at every step. The
           difference was that instead of handing specs to an engineering team

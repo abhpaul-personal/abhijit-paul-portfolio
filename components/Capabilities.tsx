@@ -19,7 +19,7 @@ const caps = [
   {
     idx: "04",
     title: "Compliance & governance at scale",
-    body: "GDPR and SOC 2 program ownership, built into the platform rather than bolted on — SOC 2 Type I achieved in a single quarter.",
+    body: "GDPR and SOC 2 ownership, built into the platform rather than bolted on — SOC 2 Type I achieved in a single quarter.",
   },
   {
     idx: "05",

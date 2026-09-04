@@ -16,7 +16,18 @@ const timeline = [
     co: "Crossover (for Work)",
   },
   {
-    dates: "Dec 2020 – Jul 2021",
+    dates: "Dec 2020 – Feb 2021",
+    role: "Job search & upskilling",
+    co: "",
+    gap: true,
+  },
+  {
+    dates: "Feb 2021 – Jun 2021",
+    role: "Product Owner",
+    co: "Hexaware Technologies",
+  },
+  {
+    dates: "Jun 2021 – Jul 2021",
     role: "Job search & upskilling",
     co: "",
     gap: true,
@@ -34,9 +45,14 @@ const timeline = [
     gap: true,
   },
   {
-    dates: "Sep 2024 – present",
+    dates: "Sep 2024 – Aug 2026",
     role: "Senior Product Manager",
     co: "Tradebyte Software GmbH (Zalando Group)",
+  },
+  {
+    dates: "Aug 2026 – present",
+    role: "Founding Product Manager (part-time / advisory)",
+    co: "ZuPick (Fanmart Media Private Limited)",
   },
 ];
 
@@ -52,7 +68,7 @@ export default function About() {
         My first decade (2005–2016) was spent as a software engineer, working
         up to Lead Analyst at GE — hands-on with the systems I&apos;d later be
         responsible for as a product leader. Since late 2016, I&apos;ve been
-        in product and program management roles, most recently building
+        in product management roles, most recently building
         fulfillment infrastructure at Tradebyte (Zalando Group). That
         engineering foundation means I can go deep with engineering teams,
         not just hand off requirements — I understand the systems I&apos;m
