@@ -4,43 +4,31 @@ const timeline = [
   { dates: "Aug 2005 – Dec 2007", role: "Software Engineer", co: "Infosys" },
   { dates: "Jan 2008 – May 2010", role: "Senior Software Engineer", co: "Wipro" },
   { dates: "May 2010 – Nov 2013", role: "Module Lead", co: "Mindtree" },
-  { dates: "Nov 2013 – Nov 2016", role: "Lead Analyst", co: "General Electric" },
   {
-    dates: "Nov 2016 – Mar 2018",
-    role: "Senior Technical Product Manager",
-    co: "General Electric",
+    dates: "Nov 2013 – Mar 2018",
+    role: "Lead Analyst / Sr. Technical Product Manager",
+    co: "General Electric (GE Capital and GE Oil and Gas)",
   },
   {
     dates: "Mar 2018 – Dec 2020",
     role: "Technical Product Manager",
-    co: "Crossover (for Work)",
+    co: "Crossover for Work",
   },
   {
-    dates: "Dec 2020 – Feb 2021",
+    dates: "Dec 2020 – Jun 2021",
     role: "Job search & upskilling",
     co: "",
     gap: true,
   },
   {
-    dates: "Feb 2021 – Jun 2021",
+    dates: "Jun 2021 – Sep 2022",
     role: "Product Owner",
-    co: "Hexaware Technologies",
-  },
-  {
-    dates: "Jun 2021 – Jul 2021",
-    role: "Job search & upskilling",
-    co: "",
-    gap: true,
-  },
-  {
-    dates: "Jul 2021 – Sep 2022",
-    role: "Product Owner",
-    co: "Upland Software (via Crossover)",
+    co: "Upland Software",
   },
   { dates: "Sep 2022 – Apr 2024", role: "Product Owner", co: "Signa Sports United" },
   {
-    dates: "May 2024 – Sep 2024",
-    role: "CareerFoundry PM certification + job search & upskilling",
+    dates: "Apr 2024 – Sep 2024",
+    role: "AI Product Management, Managing ML Projects, Human Factors in AI (Duke University); PM Certification (CareerFoundry, Berlin)",
     co: "",
     gap: true,
   },
@@ -51,8 +39,8 @@ const timeline = [
   },
   {
     dates: "Aug 2026 – present",
-    role: "Founding Product Manager (part-time / advisory)",
-    co: "ZuPick (Fanmart Media Private Limited)",
+    role: "Founding Product Manager (Advisory, Part-time)",
+    co: "ZuPick (zupick.app)",
   },
 ];
 
