@@ -128,8 +128,8 @@ export default function SelectedWork() {
 
       <Card
         title="Founding PM — ZuPick"
-        meta="Fanmart Media Private Limited · Aug 2026 – present · part-time / advisory"
-        body="Founding Product Manager for ZuPick, an early-stage AI-powered shopping discovery and comparison startup. Non-exclusive advisory engagement, ~4-5 hours/day, applying the same PM-first, human-in-the-loop discipline used on Job Kit Agent to a live consumer AI product."
+        meta="ZuPick AI · Aug 2026 – present · part-time / advisory"
+        body="Founding Product Manager for ZuPick AI, an AI-powered shopping discovery and comparison platform — live with 70K+ app downloads and 1,949 weekly active users. Currently leading a revamp of the user funnel flow. Non-exclusive advisory engagement, ~4-5 hours/day, applying the same PM-first, human-in-the-loop discipline used on Job Kit Agent to a live consumer AI product."
       />
 
       <Card

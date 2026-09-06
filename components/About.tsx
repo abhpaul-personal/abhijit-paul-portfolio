@@ -40,7 +40,7 @@ const timeline = [
   {
     dates: "Aug 2026 – present",
     role: "Founding Product Manager (Advisory, Part-time)",
-    co: "ZuPick (zupick.app)",
+    co: "ZuPick AI",
   },
 ];
 
