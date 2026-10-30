@@ -53,11 +53,12 @@ export default function SelectedWork() {
         meta="Tradebyte · Q4 2024 – Q1 2026"
         body="Built MFI (Multi-Channel Fulfillment Integrator) from zero to one — launching with 5-6 merchants at 1,500-2,000 orders/day — then led the strategic pivot to ZFI and the legacy migration that scaled it roughly 300x."
         bullets={[
-          "Scaled from ~100K to 30M monthly orders",
+          "Scaled to about 200,000 orders a day across 5 global enterprise partners",
           "~200,000 orders/day across 33 merchants post-migration, ~€3.65M ARR",
           "33 merchants migrated with zero incidents",
           "94% reduction in transient network errors, zero PII spillages",
           "Merchant activation time reduced 40%",
+          "Wrote the requirements and built the prototype for an AI-assisted matching step in the MFI Back Office that matches brand product data to fulfilment service fields, with human approval of suggested matches and a manual fallback queue for non-matches. Built in partnership with the central AI/ML team, who handled model build and execution; shipped to production.",
         ]}
       />
 
@@ -128,8 +129,8 @@ export default function SelectedWork() {
 
       <Card
         title="Founding PM — ZuPick"
-        meta="ZuPick AI · Aug 2026 – present · part-time / advisory"
-        body="Founding Product Manager for ZuPick AI, an AI-powered shopping discovery and comparison platform — live with 70K+ app downloads and 1,949 weekly active users. Currently leading a revamp of the user funnel flow. Non-exclusive advisory engagement, ~4-5 hours/day, applying the same PM-first, human-in-the-loop discipline used on Job Kit Agent to a live consumer AI product."
+        meta="ZuPick AI · Aug 2026 – Oct 2026 · part-time / advisory"
+        body="Founding Product Manager for ZuPick, an AI-powered shopping discovery and comparison platform — live with 70,000+ app downloads and close to 2,000 weekly active users. Part-time, non-exclusive advisory engagement, driving product strategy, roadmap, and discovery using Google Analytics, Vercel Analytics, and Notion."
       />
 
       <Card

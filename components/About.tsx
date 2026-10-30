@@ -15,10 +15,15 @@ const timeline = [
     co: "Crossover for Work",
   },
   {
-    dates: "Dec 2020 – Jun 2021",
+    dates: "Dec 2020 – Feb 2021",
     role: "Job search & upskilling",
     co: "",
     gap: true,
+  },
+  {
+    dates: "Feb 2021 – Jun 2021",
+    role: "Lead Business Analyst",
+    co: "Hexaware Technologies",
   },
   {
     dates: "Jun 2021 – Sep 2022",
@@ -38,7 +43,7 @@ const timeline = [
     co: "Tradebyte Software GmbH (Zalando Group)",
   },
   {
-    dates: "Aug 2026 – present",
+    dates: "Aug 2026 – Oct 2026",
     role: "Founding Product Manager (Advisory, Part-time)",
     co: "ZuPick AI",
   },

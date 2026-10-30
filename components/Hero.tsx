@@ -3,7 +3,7 @@ const stats = [
     num: "20+ yrs",
     label: "Shipped across e-commerce, SaaS, logistics — 10 engineering, 10 product",
   },
-  { num: "30M", label: "Orders/month at scale (from ~100K)" },
+  { num: "~6M", label: "Orders/month at scale (~200K/day)" },
   { num: "33", label: "Merchant migrations delivered, zero incidents" },
   { num: "€3.65M", label: "ARR delivered" },
 ];
@@ -12,10 +12,6 @@ const statusItems = [
   { label: "Notice period", value: "Available Immediately" },
   { label: "Relocation", value: "Open — anywhere in India" },
   { label: "Target roles", value: "Senior Product Management" },
-  {
-    label: "Comp band",
-    value: "₹50–70L (India) · flexible",
-  },
 ];
 
 export default function Hero() {
@@ -31,7 +27,7 @@ export default function Hero() {
       <div className="mb-7">
         <div className="font-display font-semibold text-[26px]">Abhijit Paul</div>
         <div className="font-mono text-[13px] text-textSecondary mt-1">
-          Senior Product Manager — Platform &amp; Product Delivery
+          Senior Product Leader, Platforms and Integrations
         </div>
       </div>
       <h1 className="font-display font-semibold text-[52px] leading-[1.1] mb-6 -tracking-[0.01em] max-md:text-[34px]">
@@ -40,9 +36,10 @@ export default function Hero() {
       <p className="text-lg text-textSecondary max-w-[640px] mb-12">
         Senior Product Manager with 20+ years across e-commerce, B2B SaaS, and
         logistics — I take fragile, manual systems from zero to production
-        scale, then keep them compliant and reliable as they grow. Currently
-        Founding PM at ZuPick, an AI-powered shopping discovery startup, and
-        open to Senior Product Management opportunities.
+        scale, then keep them compliant and reliable as they grow. Most
+        recently Senior Product Manager at Tradebyte (Zalando Group), and
+        Founding PM at ZuPick, an AI-powered shopping discovery startup,
+        through October 2026.
       </p>
 
       <a
@@ -72,13 +69,13 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="font-mono border-t border-border grid grid-cols-2 md:grid-cols-4">
+      <div className="font-mono border-t border-border grid grid-cols-1 md:grid-cols-3">
         {statusItems.map((s, i) => (
           <div
             key={s.label}
-            className={`p-4 ${i < statusItems.length - 1 ? "md:border-r" : ""} ${
-              i % 2 === 0 ? "border-r md:border-r" : "md:border-r-0"
-            } border-border`}
+            className={`p-4 border-border ${i > 0 ? "border-t md:border-t-0" : ""} ${
+              i < statusItems.length - 1 ? "md:border-r" : ""
+            }`}
           >
             <div className="text-[10px] uppercase tracking-wide text-textMuted mb-1">
               {s.label}

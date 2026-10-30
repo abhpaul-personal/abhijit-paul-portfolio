@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Abhijit Paul — Senior Product Manager",
     description:
-      "I build platforms that scale without breaking. 30M orders scaled, 33 merchants migrated with zero incidents, €3.65M ARR delivered.",
+      "I build platforms that scale without breaking. About 200K orders a day at scale, 33 merchants migrated with zero incidents, €3.65M ARR delivered.",
     type: "website",
   },
   twitter: {
