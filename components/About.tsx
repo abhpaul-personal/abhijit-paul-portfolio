@@ -24,6 +24,7 @@ const timeline = [
     dates: "Feb 2021 – Jun 2021",
     role: "Lead Business Analyst",
     co: "Hexaware Technologies",
+    desc: "Insurance domain, BIG4 client",
   },
   {
     dates: "Jun 2021 – Sep 2022",
@@ -94,6 +95,9 @@ export default function About() {
               </div>
               {t.co && (
                 <div className="text-[13px] text-textSecondary">{t.co}</div>
+              )}
+              {t.desc && (
+                <div className="text-xs text-textMuted mt-0.5">{t.desc}</div>
               )}
             </div>
           </div>
