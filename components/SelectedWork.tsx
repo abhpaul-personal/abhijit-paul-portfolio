@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MfiStory from "./MfiStory";
 import SectionDivider from "./SectionDivider";
 
 function Card({
@@ -7,28 +8,34 @@ function Card({
   body,
   bullets,
   children,
+  wide = false,
 }: {
   title: string;
   meta: string;
   body: string;
   bullets?: string[];
   children?: React.ReactNode;
+  wide?: boolean;
 }) {
   return (
-    <div className="bg-surface border border-border rounded-[10px] p-8 mb-5">
-      <div className="flex justify-between items-baseline flex-wrap gap-2 mb-3">
-        <h3 className="font-display font-semibold text-[19px]">{title}</h3>
-        <span className="font-mono text-xs text-textMuted">{meta}</span>
+    <div
+      className={`bg-surface border border-line rounded-[10px] p-7 h-full ${
+        wide ? "md:col-span-2" : ""
+      }`}
+    >
+      <div className="flex justify-between items-baseline flex-wrap gap-x-4 gap-y-1 mb-3">
+        <h4 className="font-display font-semibold text-[19px]">{title}</h4>
+        <span className="font-mono text-xs text-inkSoft">{meta}</span>
       </div>
-      <p className="text-textSecondary max-w-[640px]">{body}</p>
+      <p className="text-inkSoft max-w-[640px]">{body}</p>
       {bullets && (
         <ul className="mt-4 space-y-1.5">
           {bullets.map((b) => (
             <li
               key={b}
-              className="font-mono text-[13px] text-textSecondary py-1.5 border-t border-border first:border-t-0"
+              className="font-mono text-[13px] text-inkSoft py-1.5 border-t border-line first:border-t-0"
             >
-              <span className="text-signal">→ </span>
+              <span className="text-accent">→ </span>
               {b}
             </li>
           ))}
@@ -39,6 +46,13 @@ function Card({
   );
 }
 
+const screenshots = [
+  { src: "/images/jka-landing.png", cap: "Landing page" },
+  { src: "/images/jka-input.png", cap: "Job fit analysis input" },
+  { src: "/images/jka-fitscore.png", cap: "Fit score — 72/100" },
+  { src: "/images/jka-cv.png", cap: "Generated CV output" },
+];
+
 export default function SelectedWork() {
   return (
     <section id="work" className="py-24">
@@ -48,106 +62,96 @@ export default function SelectedWork() {
         Selected work
       </h2>
 
-      <Card
-        title="MFI → ZFI: 0 to 1, then scaled"
-        meta="Tradebyte · Q4 2024 – Q1 2026"
-        body="Built MFI (Multi-Channel Fulfillment Integrator) from zero to one — launching with 5-6 merchants at 1,500-2,000 orders/day — then led the strategic pivot to ZFI and the legacy migration that scaled it roughly 300x."
-        bullets={[
-          "Scaled to about 200,000 orders a day across 5 global enterprise partners",
-          "~200,000 orders/day across 33 merchants post-migration, ~€3.65M ARR",
-          "33 merchants migrated with zero incidents",
-          "94% reduction in transient network errors, zero PII spillages",
-          "Merchant activation time reduced 40%",
-          "Wrote the requirements and built the prototype for an AI-assisted matching step in the MFI Back Office that matches brand product data to fulfilment service fields, with human approval of suggested matches and a manual fallback queue for non-matches. Built in partnership with the central AI/ML team, who handled model build and execution; shipped to production.",
-        ]}
-      />
+      <MfiStory />
 
-      <Card
-        title="Multi-channel shipping: EU expansion"
-        meta="Tradebyte · Q2 2025 – Q1 2026"
-        body="Drove multi-channel shipping and returns capability across Germany, Belgium, Netherlands, and Switzerland."
-        bullets={["Cross-border shipping/returns live across 4 EU markets"]}
-      />
+      <h3 className="font-display font-semibold text-[26px] mt-24 mb-6">
+        Also shipped
+      </h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <Card
+          title="Multi-channel shipping: EU expansion"
+          meta="Tradebyte · Q2 2025 – Q1 2026"
+          body="Drove multi-channel shipping and returns capability across Germany, Belgium, Netherlands, and Switzerland, including closing a Swiss customs data gap across five system layers."
+          bullets={["Cross-border shipping/returns live across 4 EU markets"]}
+        />
 
-      <Card
-        title="Compliance at platform scale: GDPR & SOC 2"
-        meta="Tradebyte · Q3 2025 – Q1 2026"
-        body="Owned GDPR compliance across the platform, built the AWS S3 financial data pipeline, and led SOC 2 Type I readiness — achieved in a single quarter."
-        bullets={[
-          "SOC 2 Type I achieved in one quarter",
-          "Full GDPR compliance ownership",
-        ]}
-      />
+        <Card
+          title="Compliance at platform scale: GDPR & SOC 2"
+          meta="Tradebyte · Q3 2025 – Q1 2026"
+          body="Owned GDPR compliance across the platform, built the AWS S3 financial data pipeline, and led SOC 2 Type I readiness — achieved in a single quarter with zero findings."
+          bullets={[
+            "SOC 2 Type I achieved in one quarter, zero findings",
+            "Full GDPR compliance ownership",
+            "IAM, RBAC, and audit logging",
+          ]}
+        />
 
-      <Card
-        title="Job Kit Agent"
-        meta="Personal build · AI tooling"
-        body="An AI-powered job application agent that gates kit generation behind a human-reviewed fit analysis — no application drafted without the user checking fit first. Built PM-style: PRD through six milestones, delegated to Claude Code, human in the loop at every review point."
-      >
-        <div className="flex gap-4 font-mono text-[13px] my-4">
-          <a
-            href="https://job-kit-agent-nu.vercel.app"
-            target="_blank"
-            className="text-signal hover:underline"
-          >
-            job-kit-agent-nu.vercel.app
-          </a>
-          <span className="text-textMuted">·</span>
-          <a
-            href="https://github.com/abhpaul-personal/ai-job-application-agent"
-            target="_blank"
-            className="text-signal hover:underline"
-          >
-            GitHub (94% TypeScript)
-          </a>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
-          {[
-            { src: "/images/jka-landing.png", cap: "Landing page" },
-            { src: "/images/jka-input.png", cap: "Job fit analysis input" },
-            { src: "/images/jka-fitscore.png", cap: "Fit score — 72/100" },
-            { src: "/images/jka-cv.png", cap: "Generated CV output" },
-          ].map((s) => (
-            <div
-              key={s.src}
-              className="relative aspect-[16/10] bg-surface2 border border-border rounded-md overflow-hidden"
+        <Card
+          wide
+          title="Job Kit Agent"
+          meta="Personal build · AI tooling"
+          body="An AI-powered job application agent that gates kit generation behind a human-reviewed fit analysis — no application drafted without the user checking fit first. Built PM-style: PRD through six milestones, delegated to Claude Code, human in the loop at every review point."
+        >
+          <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-[13px] my-4">
+            <a
+              href="https://job-kit-agent-nu.vercel.app"
+              target="_blank"
+              className="text-accent hover:underline"
             >
-              <Image
-                src={s.src}
-                alt={s.cap}
-                fill
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-contain object-top p-1"
-              />
-              <span className="absolute bottom-0 left-0 right-0 px-2 py-1.5 bg-gradient-to-t from-bg/90 to-transparent font-mono text-[10px]">
-                {s.cap}
-              </span>
-            </div>
-          ))}
-        </div>
-      </Card>
+              job-kit-agent-nu.vercel.app
+            </a>
+            <span className="text-inkSoft">·</span>
+            <a
+              href="https://github.com/abhpaul-personal/ai-job-application-agent"
+              target="_blank"
+              className="text-accent hover:underline"
+            >
+              GitHub (94% TypeScript)
+            </a>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
+            {screenshots.map((s) => (
+              <div
+                key={s.src}
+                className="relative aspect-[16/10] bg-monoBg border border-line rounded-md overflow-hidden"
+              >
+                <Image
+                  src={s.src}
+                  alt={s.cap}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-contain object-top p-1"
+                />
+                <span className="absolute bottom-0 left-0 right-0 px-2 py-1.5 bg-gradient-to-t from-bg/90 to-transparent font-mono text-[10px] text-ink">
+                  {s.cap}
+                </span>
+              </div>
+            ))}
+          </div>
+        </Card>
 
-      <Card
-        title="Founding PM — ZuPick"
-        meta="ZuPick AI · Aug 2026 – Oct 2026 · part-time / advisory"
-        body="Founding Product Manager for ZuPick, an AI-powered shopping discovery and comparison platform — live with 70,000+ app downloads and close to 2,000 weekly active users. Part-time, non-exclusive advisory engagement, driving product strategy, roadmap, and discovery using Google Analytics, Vercel Analytics, and Notion."
-      />
+        <Card
+          title="Founding PM — ZuPick"
+          meta="ZuPick AI · Aug 2026 – Oct 2026 · part-time / advisory"
+          body="Founding Product Manager for ZuPick, an AI-powered shopping discovery and comparison platform — live with 70,000+ app downloads and close to 2,000 weekly active users. Part-time, non-exclusive advisory engagement, driving product strategy, roadmap, and discovery using Google Analytics, Vercel Analytics, and Notion."
+        />
 
-      <Card
-        title="Founder — PM Career Sprint"
-        meta="Consulting practice · iamunderpaid.com"
-        body="CV & LinkedIn optimization and mock interview coaching for PM job seekers. Services: PM Career Strategy 1:1, CV & LinkedIn Teardown, Job Search Sprint Advisory Package, Async Q&A."
-      >
-        <div className="font-mono text-[13px] mt-4">
-          <a
-            href="https://iamunderpaid.com/m/abhijit-paul"
-            target="_blank"
-            className="text-signal hover:underline"
-          >
-            Book a session →
-          </a>
-        </div>
-      </Card>
+        <Card
+          title="Founder — PM Career Sprint"
+          meta="Consulting practice · iamunderpaid.com"
+          body="CV & LinkedIn optimization and mock interview coaching for PM job seekers. Services: PM Career Strategy 1:1, CV & LinkedIn Teardown, Job Search Sprint Advisory Package, Async Q&A."
+        >
+          <div className="font-mono text-[13px] mt-4">
+            <a
+              href="https://iamunderpaid.com/m/abhijit-paul"
+              target="_blank"
+              className="text-accent hover:underline"
+            >
+              Book a session →
+            </a>
+          </div>
+        </Card>
+      </div>
     </section>
   );
 }

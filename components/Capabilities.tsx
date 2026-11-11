@@ -37,17 +37,17 @@ export default function Capabilities() {
       <h2 className="font-display font-semibold text-[32px] mb-3">
         Five things I&apos;m actually good at
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border rounded-[10px] overflow-hidden mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-line border border-line rounded-[10px] overflow-hidden mt-10">
         {caps.map((c) => (
           <div
             key={c.idx}
             className={`bg-surface p-7 ${c.full ? "md:col-span-2" : ""}`}
           >
-            <div className="font-mono text-xs text-signal mb-3">{c.idx}</div>
+            <div className="font-mono text-xs text-accent mb-3">{c.idx}</div>
             <h3 className="font-display font-semibold text-[19px] mb-2">
               {c.title}
             </h3>
-            <p className="text-sm text-textSecondary">{c.body}</p>
+            <p className="text-sm text-inkSoft">{c.body}</p>
           </div>
         ))}
       </div>

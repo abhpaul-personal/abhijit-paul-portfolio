@@ -46,12 +46,12 @@ export default function Insights() {
         <h3 className="font-display font-semibold text-[19px] mb-2">
           Building it myself
         </h3>
-        <blockquote className="font-display font-medium text-lg border-l-2 border-signal pl-5 mb-5">
+        <blockquote className="font-display font-medium text-lg border-l-2 border-accent pl-5 mb-5">
           Building Job Kit Agent taught me something my product management
           background hadn&apos;t: the discipline doesn&apos;t change when
           you&apos;re the one shipping the code, but the loop gets tighter.
         </blockquote>
-        <p className="text-textSecondary max-w-[640px]">
+        <p className="text-inkSoft max-w-[640px]">
           I ran it exactly the way I&apos;d run any product initiative — a PRD first,
           broken into six milestones, with a defined review gate at each one,
           delegated to Claude Code and reviewed by me at every step. The
@@ -59,7 +59,7 @@ export default function Insights() {
           and reviewing outcomes weeks later, I was reviewing generated code
           within the hour.
         </p>
-        <p className="text-textSecondary max-w-[640px] mt-3">
+        <p className="text-inkSoft max-w-[640px] mt-3">
           The rule I held myself to throughout: nothing gets claimed or
           generated that isn&apos;t grounded in real, verifiable input. The
           agent gates its own output behind a human fit-check — no
@@ -68,7 +68,7 @@ export default function Insights() {
           strict schema, instructed to only draw on the user&apos;s own
           profile data.
         </p>
-        <p className="text-textSecondary max-w-[640px] mt-3">
+        <p className="text-inkSoft max-w-[640px] mt-3">
           What surprised me is how much of &quot;AI-assisted building&quot;
           is really just product management with a faster feedback loop.
         </p>
@@ -78,7 +78,7 @@ export default function Insights() {
         <h3 className="font-display font-semibold text-[19px] mb-2">
           Building it into someone else&apos;s product
         </h3>
-        <p className="text-textSecondary max-w-[640px]">
+        <p className="text-inkSoft max-w-[640px]">
           Adding an AI layer to a product that already has real users is a
           different problem than building an AI product from scratch — the
           existing workflow is the constraint, not a blank canvas.
@@ -90,7 +90,7 @@ export default function Insights() {
                 {["Stage", "Actions", "Deliverable"].map((h) => (
                   <th
                     key={h}
-                    className="font-mono text-[11px] uppercase tracking-wide text-textMuted text-left py-2.5 px-3 border-b border-border"
+                    className="font-mono text-[11px] uppercase tracking-wide text-inkSoft text-left py-2.5 px-3 border-b border-line"
                   >
                     {h}
                   </th>
@@ -100,13 +100,13 @@ export default function Insights() {
             <tbody>
               {rows.map((r) => (
                 <tr key={r.stage}>
-                  <td className="py-3 px-3 border-b border-border font-mono text-xs text-signal whitespace-nowrap align-top">
+                  <td className="py-3 px-3 border-b border-line font-mono text-xs text-accent whitespace-nowrap align-top">
                     {r.stage}
                   </td>
-                  <td className="py-3 px-3 border-b border-border text-textSecondary align-top">
+                  <td className="py-3 px-3 border-b border-line text-inkSoft align-top">
                     {r.actions}
                   </td>
-                  <td className="py-3 px-3 border-b border-border text-textSecondary align-top">
+                  <td className="py-3 px-3 border-b border-line text-inkSoft align-top">
                     {r.deliverable}
                   </td>
                 </tr>

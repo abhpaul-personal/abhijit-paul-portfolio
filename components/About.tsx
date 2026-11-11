@@ -52,13 +52,13 @@ const timeline = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="pt-24 pb-12">
       <SectionDivider step={3} total={5} fill="60%" />
       <div className="eyebrow">about</div>
       <h2 className="font-display font-semibold text-[32px] mb-3">
         Engineer first, product leader since
       </h2>
-      <p className="text-base leading-[1.8] max-w-[680px] text-textSecondary">
+      <p className="text-base leading-[1.8] max-w-[680px] text-inkSoft">
         My first decade (2005–2016) was spent as a software engineer, working
         up to Lead Analyst at GE — hands-on with the systems I&apos;d later be
         responsible for as a product leader. Since late 2016, I&apos;ve been
@@ -69,35 +69,35 @@ export default function About() {
         asking people to build.
       </p>
 
-      <div className="border-l border-border mt-8">
+      <div className="border-l border-line mt-8">
         {timeline.map((t, i) => (
           <div
             key={i}
-            className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-1 md:gap-5 py-[18px] pl-6 relative border-t border-border first:border-t-0"
+            className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-1 md:gap-5 py-[18px] pl-6 relative border-t border-line first:border-t-0"
           >
             <span
               className={`absolute -left-[5px] top-[26px] w-[9px] h-[9px] rounded-full bg-bg border ${
-                t.gap ? "border-textMuted" : "border-signal"
+                t.gap ? "border-inkSoft" : "border-accent"
               }`}
             />
-            <div className="font-mono text-xs text-textMuted whitespace-nowrap">
+            <div className="font-mono text-xs text-inkSoft whitespace-nowrap">
               {t.dates}
             </div>
             <div>
               <div
                 className={`text-sm ${
                   t.gap
-                    ? "text-textMuted italic font-normal"
+                    ? "text-inkSoft italic font-normal"
                     : "font-medium"
                 }`}
               >
                 {t.role}
               </div>
               {t.co && (
-                <div className="text-[13px] text-textSecondary">{t.co}</div>
+                <div className="text-[13px] text-inkSoft">{t.co}</div>
               )}
               {t.desc && (
-                <div className="text-xs text-textMuted mt-0.5">{t.desc}</div>
+                <div className="text-xs text-inkSoft mt-0.5">{t.desc}</div>
               )}
             </div>
           </div>

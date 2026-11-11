@@ -2,15 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Warm Editorial palette. Channel triplets (not hex) so Tailwind alpha
+   modifiers like bg-bg/85 work. Dark is a designed second theme, not an
+   inversion of the light one. */
 :root {
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+
+  --bg: 247 245 241;          /* #F7F5F1 */
+  --surface: 255 255 255;     /* #FFFFFF */
+  --ink: 28 26 23;            /* #1C1A17 */
+  --ink-soft: 91 86 78;       /* #5B564E */
+  --line: 228 223 214;        /* #E4DFD6 */
+  --accent: 138 79 46;        /* #8A4F2E */
+  --accent-soft: 241 227 216; /* #F1E3D8 */
+  --mono-bg: 239 236 229;     /* #EFECE5 */
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: 23 20 15;           /* #17140F */
+    --surface: 33 29 23;      /* #211D17 */
+    --ink: 242 237 228;       /* #F2EDE4 */
+    --ink-soft: 184 175 159;  /* #B8AF9F */
+    --line: 53 46 36;         /* #352E24 */
+    --accent: 216 147 94;     /* #D8935E */
+    --accent-soft: 44 32 22;  /* #2C2016 */
+    --mono-bg: 28 24 18;      /* #1C1812 */
+    color-scheme: dark;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
-  background: #0E1116;
-  color: #E9EDF1;
+  background: rgb(var(--bg));
+  color: rgb(var(--ink));
 }
 
 .eyebrow {
@@ -18,7 +54,7 @@ body {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #5FBF9F;
+  color: rgb(var(--accent));
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -28,22 +64,22 @@ body {
   content: '';
   width: 8px;
   height: 8px;
-  background: #5FBF9F;
+  background: rgb(var(--accent));
   display: inline-block;
 }
 
 .milebar { display: flex; gap: 4px; margin-bottom: 16px; }
-.milebar span { width: 28px; height: 5px; background: #262E38; }
-.milebar span.done { background: #5FBF9F; }
+.milebar span { width: 28px; height: 5px; background: rgb(var(--line)); }
+.milebar span.done { background: rgb(var(--accent)); }
 
 .sect-divider { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
 .sect-divider .track {
-  flex: 1; height: 2px; background: #262E38; position: relative; max-width: 120px;
+  flex: 1; height: 2px; background: rgb(var(--line)); position: relative; max-width: 120px;
 }
 .sect-divider .track::after {
   content: ''; position: absolute; left: 0; top: 0; height: 100%;
-  background: #5FBF9F; width: var(--fill, 40%);
+  background: rgb(var(--accent)); width: var(--fill, 40%);
 }
 .sect-divider .tag {
-  font-family: var(--font-mono); font-size: 11px; color: #5B6472; white-space: nowrap;
+  font-family: var(--font-mono); font-size: 11px; color: rgb(var(--ink-soft)); white-space: nowrap;
 }
