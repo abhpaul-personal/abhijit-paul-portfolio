@@ -69,6 +69,7 @@ export const ondcProject = {
   testing: [
     "On one sample seller, the model misread the GSTIN on a certificate image. The checksum check caught it and the reviewer sent it back at the approval gate. This is the case the design exists for.",
     "In bulk onboarding of 12 cooperative sellers, both planted errors (an invalid GSTIN and an expired FSSAI licence) were caught before approval.",
+    "On the evaluation kit's trap catalog of 32 rows, the flow catches all 13 planted errors (bad barcodes, prices above MRP, missing FSSAI licences, duplicates and an unsupported \"organic\" claim), and no agent invents a statutory value.",
     "Lighthouse 100 on accessibility, best practices and SEO on all four main pages, and 100 on performance on desktop, with 238 unit tests and 16 end-to-end tests including accessibility checks.",
   ],
   howBuilt:
