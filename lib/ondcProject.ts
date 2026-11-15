@@ -39,8 +39,8 @@ export const ondcProject = {
       width: 1312,
       height: 424,
       caption:
-        "A real checksum catches a GSTIN the model misread from a certificate image.",
-      alt: `${title} verification screen. A real checksum catches a GSTIN the model misread from a certificate image.`,
+        "A worked example: the checksum check catches a GSTIN misread by an earlier prompt version.",
+      alt: `${title} verification screen. A worked example: the checksum check catches a GSTIN misread by an earlier prompt version.`,
     },
     {
       src: `${imageDir}/bulk-g0.webp`,
@@ -51,10 +51,10 @@ export const ondcProject = {
     },
     {
       src: `${imageDir}/scorecard.webp`,
-      width: 1312,
-      height: 212,
-      caption: "Every run is scored against ground truth.",
-      alt: `${title} scorecard screen. Every run is scored against ground truth.`,
+      width: 1440,
+      height: 900,
+      caption: "Every run is scored against ground truth: 13 of 13 planted errors caught.",
+      alt: `${title} scorecard screen. Every run is scored against ground truth: 13 of 13 planted errors caught.`,
     },
   ],
   problem:
@@ -64,13 +64,14 @@ export const ondcProject = {
   decisions: [
     "An agent never invents a statutory value. It can only extract it, pre-fill it from the approved seller profile, or ask the seller.",
     "Deterministic checks run as real code: GSTIN checksum, FSSAI expiry, IFSC format, barcode check digit, MRP versus price and duplicates.",
-    "Run once, replay forever: each agent step is cached by a hash of its input, prompt, schema and model, so the public demo replays real model output and never calls the model again.",
+    "Run once, replay forever: each agent step is cached by a hash of its input, prompt, schema and model, so the public demo replays real model output and never calls the model again. A test guard fails the test run if anything in demo mode tries to.",
   ],
   testing: [
-    "On one sample seller, the model misread the GSTIN on a certificate image. The checksum check caught it and the reviewer sent it back at the approval gate. This is the case the design exists for.",
-    "In bulk onboarding of 12 cooperative sellers, both planted errors (an invalid GSTIN and an expired FSSAI licence) were caught before approval.",
+    "Testing exposed a prompt bug: an early version told the agent to \"correct\" a GSTIN from the certificate image. It misread the certificate on all six sample sellers and replaced the valid GSTIN with its misreading on four of them. The real checksum check caught all four before approval. I fixed the prompt, and kept one sample seller on the old version as a worked example of a check catching a model error.",
     "On the evaluation kit's trap catalog of 32 rows, the flow catches all 13 planted errors (bad barcodes, prices above MRP, missing FSSAI licences, duplicates and an unsupported \"organic\" claim), and no agent invents a statutory value.",
-    "Lighthouse 100 on accessibility, best practices and SEO on all five pages, and 100 on desktop performance on the home, demo and case study pages, with over 240 unit tests and 19 end-to-end tests including accessibility checks.",
+    "Counting items at every step exposed a silent data-loss bug, where resolving a duplicate dropped both copies. It is fixed, and the item count at each stage is now in the audit log.",
+    "In bulk onboarding of 12 cooperative sellers, both planted errors (an invalid GSTIN and an expired FSSAI licence) were caught before approval.",
+    "250 unit tests and 22 end-to-end tests, including accessibility checks.",
   ],
   howBuilt:
     "PRD first, then nine milestones with Claude Code, reviewing and approving each one. The PRD and a synthetic evaluation kit with ground truth are in the repo.",
