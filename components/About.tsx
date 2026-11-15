@@ -33,8 +33,8 @@ const timeline = [
   },
   { dates: "Sep 2022 – Apr 2024", role: "Product Owner", co: "Signa Sports United" },
   {
-    dates: "Apr 2024 – Sep 2024",
-    role: "AI Product Management, Managing ML Projects, Human Factors in AI (Duke University); PM Certification (CareerFoundry, Berlin)",
+    dates: "Mar 2024 – May 2024",
+    role: "AI Product Management, Duke University (March 2024); Product Management program, CareerFoundry, Berlin (March to May 2024)",
     co: "",
     gap: true,
   },

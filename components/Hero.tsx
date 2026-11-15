@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="mb-7">
         <div className="font-display font-semibold text-[26px] text-ink">Abhijit Paul</div>
         <div className="font-mono text-[13px] text-inkSoft mt-1">
-          Senior Product Leader, Platforms and Integrations
+          Senior Product Manager, Platforms and Integrations
         </div>
       </div>
       <h1 className="font-display font-semibold text-[52px] leading-[1.1] mb-6 -tracking-[0.01em] text-ink max-md:text-[34px]">
