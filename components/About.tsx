@@ -31,10 +31,15 @@ const timeline = [
     role: "Product Owner",
     co: "Upland Software",
   },
-  { dates: "Sep 2022 – Apr 2024", role: "Product Owner", co: "Signa Sports United" },
   {
-    dates: "Mar 2024 – May 2024",
-    role: "AI Product Management, Duke University (March 2024); Product Management program, CareerFoundry, Berlin (March to May 2024)",
+    dates: "Sep 2022 – Apr 2024",
+    role: "Product Owner",
+    co: "Signa Sports United",
+    desc: "Also studied AI Product Management at Duke University (March 2024) and the Product Management program at CareerFoundry, Berlin (March to May 2024)",
+  },
+  {
+    dates: "May 2024 – Sep 2024",
+    role: "Job search & upskilling",
     co: "",
     gap: true,
   },
