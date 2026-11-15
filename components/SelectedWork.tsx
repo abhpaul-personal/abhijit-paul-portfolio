@@ -1,6 +1,48 @@
 import Image from "next/image";
+import { ondcProject } from "@/lib/ondcProject";
 import MfiStory from "./MfiStory";
+import { OndcButtons, OndcTags } from "./OndcProjectParts";
 import SectionDivider from "./SectionDivider";
+
+function OndcCard() {
+  const p = ondcProject;
+  return (
+    <article className="md:col-span-2 bg-surface border border-line rounded-[10px] overflow-hidden">
+      <Image
+        src={p.hero.src}
+        alt={p.hero.alt}
+        width={p.hero.width}
+        height={p.hero.height}
+        sizes="(max-width: 920px) 100vw, 856px"
+        className="w-full h-auto border-b border-line"
+      />
+      <div className="p-7">
+        <div className="font-mono text-[11px] uppercase tracking-wide text-accent mb-2">
+          {p.label}
+        </div>
+        <h4 className="font-display font-semibold text-[22px] mb-3">
+          <a href={p.path} className="hover:underline">
+            {p.title}
+          </a>
+        </h4>
+        <p className="text-inkSoft max-w-[680px]">{p.cardText}</p>
+        <div className="mt-4">
+          <OndcTags />
+        </div>
+        <div className="mt-5">
+          <OndcButtons>
+            <a
+              href={p.path}
+              className="font-mono text-xs text-accent hover:underline"
+            >
+              Read the case study →
+            </a>
+          </OndcButtons>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 function Card({
   title,
@@ -68,6 +110,8 @@ export default function SelectedWork() {
         Also shipped
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <OndcCard />
+
         <Card
           title="Multi-channel shipping: EU expansion"
           meta="Tradebyte · Q2 2025 – Q1 2026"

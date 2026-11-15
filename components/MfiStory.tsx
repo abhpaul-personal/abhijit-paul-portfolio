@@ -79,7 +79,7 @@ const stages: Stage[] = [
     node: "ZFI",
     title: "ZFI: carried forward",
     intro:
-      "Led the legacy migration (~300x scale), carrying forward the same REST API contracts, idempotency design (Marketplace ID + Order UUID), and circuit-breaker patterns.",
+      "Led the legacy migration (about 100x scale), carrying forward the same REST API contracts, idempotency design (Marketplace ID + Order UUID), and circuit-breaker patterns.",
     bullets: [
       "Ran per-merchant phased releases using MFI feature flags as a kill switch, including returns data sharing as image, PDF, or JSON",
     ],
@@ -247,7 +247,7 @@ export default function MfiStory() {
           Tradebyte · Q4 2024 – Q1 2026
         </div>
         <p className="text-inkSoft max-w-[640px] mt-3">
-          Built MFI (Multi-Channel Fulfillment Integrator) from zero to one,
+          Built MFI (Multi-Fulfillment Integration) from zero to one,
           then led the pivot to ZFI and the legacy migration. Four stages, in
           order.
         </p>
